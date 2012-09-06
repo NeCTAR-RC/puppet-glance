@@ -31,3 +31,10 @@ SSL certs
  * ssl_key_path  - where on the filesystem the ssl key lives
 
 Note: If you tag these resources with 'sslcert' nginx will be restarted if these change.
+
+Classes
+-------
+
+glance::api
+
+glance::registry
