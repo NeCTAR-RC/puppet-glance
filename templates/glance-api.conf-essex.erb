@@ -91,6 +91,9 @@ registry_client_protocol = http
 # to the registry server, if any. Alternately, you may set the
 # GLANCE_CLIENT_CA_FILE environ variable to a filepath of the CA cert file
 # registry_client_ca_file = /path/to/ca/file
+<% if glance_registry_ssl %>
+registry_client_ca_file = <%= ssl_cacert_path %>
+<% end %>
 
 # ============ Notification System Options =====================
 
