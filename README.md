@@ -30,7 +30,7 @@ SSL certs
  * ssl_cert_path - where on the filesystem the ssl cert lives
  * ssl_key_path  - where on the filesystem the ssl key lives
 
-Note: If you tag these resources with 'sslcert' nginx will be restarted if these change.
+Note: If you tag these resources with 'sslcert' glance will be restarted if these change.
 
 Classes
 -------
