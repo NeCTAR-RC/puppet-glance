@@ -69,6 +69,9 @@ cert_file = <%= ssl_cert_path %>
 
 # Private key file to use when starting registry server securely
 key_file = <%= ssl_key_path %>
+
+ca_file = <%= ssl_cacert_path %>
+
 <% end %>
 
 [paste_deploy]
