@@ -53,6 +53,12 @@ class glance::api inherits glance {
       content => template('glance/glance-scrubber-paste.ini.erb');
   }
 
+
+  nagios::service { 'http_glance_api':
+    check_command => 'http_port!9292',
+    servicegroups => 'openstack-endpoints';
+  }
+
   nagios::nrpe::service {
     'service_glance-api':
       check_command => "/usr/lib/nagios/plugins/check_procs -c ${total_procs}:${total_procs} -u glance -a /usr/bin/glance-api";
