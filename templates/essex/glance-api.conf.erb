@@ -154,11 +154,7 @@ swift_store_auth_address = <%= keystone_protocol %>://<%= keystone_host %>:35357
 # If you use Swift authentication service, set it to 'account':'user'
 # where 'account' is a Swift storage account and 'user'
 # is a user in that account
-<% if @environment == "testing" -%>
-swift_store_user = <%= keystone_service_tenant %>:<%= glance_keystone_user %>
-<%- else -%>
-swift_store_user = glance:<%= glance_keystone_user %>
-<%- end -%>
+swift_store_user = <%= glance_images_tenant %>:<%= glance_keystone_user %>
 
 # Auth key for the user authenticating against the
 # Swift authentication service

@@ -14,6 +14,7 @@ Glance
  * glance_registry_workers
  * glance_api_ssl
  * glance_registration_ssl
+ * glance_images_tenant - The tenant under which images are stored if using swift
 
 Openstack
 

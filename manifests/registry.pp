@@ -1,7 +1,7 @@
 class glance::registry inherits glance {
 
   if !$::glance_registry_workers {
-    $workers = 1
+    $workers = 0
     } else {
     $workers = $::glance_registry_workers
   }
@@ -25,7 +25,7 @@ class glance::registry inherits glance {
     owner   => glance,
     group   => glance,
     mode    => '0640',
-    content => template("glance/glance-registry.conf-${::openstack_version}.erb"),
+    content => template("glance/${openstack_version}/glance-registry.conf.erb"),
     notify  => Service['glance-registry'],
     require => Package['glance-registry'],
   }
@@ -35,7 +35,7 @@ class glance::registry inherits glance {
     owner   => glance,
     group   => glance,
     mode    => '0640',
-    content => template('glance/glance-registry-paste.ini.erb'),
+    content => template("glance/${openstack_version}/glance-registry-paste.ini.erb"),
     notify  => Service['glance-registry'],
     require => Package['glance-registry'],
   }
