@@ -1,7 +1,7 @@
 class glance::api inherits glance {
 
   if !$::glance_api_workers {
-    $workers = 1
+    $workers = 0
     } else {
     $workers = $::glance_api_workers
   }
@@ -11,10 +11,6 @@ class glance::api inherits glance {
   package { 'glance-api':
     ensure => installed,
     before => User['glance'],
-  }
-
-  package { 'python-swift':
-    ensure => installed,
   }
 
   realize Package['python-keystone']
@@ -40,17 +36,13 @@ class glance::api inherits glance {
 
   file {
     '/etc/glance/glance-api.conf':
-      content => template("glance/glance-api.conf-${openstack_version}.erb");
+      content => template("glance/${openstack_version}/glance-api.conf.erb");
     '/etc/glance/glance-api-paste.ini':
-      content => template('glance/glance-api-paste.ini.erb');
+      content => template("glance/${openstack_version}/glance-api-paste.ini.erb");
     '/etc/glance/glance-cache.conf':
-      content => template("glance/glance-cache.conf.erb");
-    '/etc/glance/glance-cache-paste.ini':
-      content => template('glance/glance-cache-paste.ini.erb');
+      content => template("glance/${openstack_version}/glance-cache.conf.erb");
     '/etc/glance/glance-scrubber.conf':
-      content => template("glance/glance-scrubber.conf.erb");
-    '/etc/glance/glance-scrubber-paste.ini':
-      content => template('glance/glance-scrubber-paste.ini.erb');
+      content => template("glance/${openstack_version}/glance-scrubber.conf.erb");
   }
 
   nagios::nrpe::service {
