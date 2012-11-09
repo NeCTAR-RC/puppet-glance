@@ -17,7 +17,7 @@ bind_port = 9191
 
 # Log to this file. Make sure you do not set the same log
 # file for both the API and registry servers!
-log_file = /var/log/glance/glance-registry.log
+log_file = /var/log/glance/registry.log
 
 # Backlog requests when creating socket
 backlog = 4096
@@ -60,17 +60,16 @@ use_syslog = False
 # Facility to use. If unset defaults to LOG_USER.
 # syslog_log_facility = LOG_LOCAL1
 
+<% if glance_registry_ssl %>
 # ================= SSL Options ===============================
 
 # Certificate file to use when starting registry server securely
-# cert_file = /path/to/certfile
+cert_file = <%= ssl_certcombined_path %>
 
 # Private key file to use when starting registry server securely
-# key_file = /path/to/keyfile
+key_file = <%= ssl_key_path %>
 
-# CA certificate file to use to verify connecting clients
-# ca_file = /path/to/cafile
-
+<% end %>
 
 [keystone_authtoken]
 auth_host = <%= keystone_host %>
