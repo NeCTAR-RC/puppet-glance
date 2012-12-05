@@ -47,12 +47,22 @@ class glance::registry inherits glance {
   }
 
   nagios::service { 'http_glance_registry':
-    check_command => 'https_port!9191',
+    check_command => 'check_glance_registry_ssl!9191',
     servicegroups => 'openstack-endpoints';
   }
 
   nagios::nrpe::service {
     'service_glance-registry':
       check_command => "/usr/lib/nagios/plugins/check_procs -c ${workers}:${total_procs} -u glance -a /usr/bin/glance-registry";
+  }
+}
+
+class glance::registry::nagios-checks {
+  # These are checks that can be run by the nagios server.
+  nagios::command {
+    'check_glance_registry_ssl':
+      check_command => '/usr/lib/nagios/plugins/check_http --ssl -p \'$ARG1$\' -e 401 -H \'$HOSTADDRESS$\' -I \'$HOSTADDRESS$\'';
+    'check_glance_registry':
+      check_command => '/usr/lib/nagios/plugins/check_http -p \'$ARG1$\' -e 401 -H \'$HOSTADDRESS$\' -I \'$HOSTADDRESS$\'';
   }
 }
