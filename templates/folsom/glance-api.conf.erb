@@ -13,7 +13,7 @@ debug = False
 # in a request to add a new image to Glance? Known schemes are determined
 # by the known_stores option below.
 # Default: 'file'
-default_store = <%= glance_defaultstore %>
+default_store = <%= defaultstore %>
 
 # List of which store classes and store class locations are
 # currently known to glance at startup.
@@ -91,7 +91,7 @@ use_syslog = False
 #syslog_log_facility = LOG_LOCAL0
 
 
-<% if glance_api_ssl %>
+<% if ssl %>
 # ================= SSL Options ===============================
 
 # Certificate file to use when starting registry server securely
@@ -114,14 +114,14 @@ ca_file = <%= ssl_cacert_path %>
 # ============ Registry Options ===============================
 
 # Address to find the registry server
-registry_host = <%= glance_registry_host %>
+registry_host = <%= registry_host %>
 
 # Port the registry server is listening on
 registry_port = 9191
 
 # What protocol to use when connecting to the registry server?
 # Set to https for secure HTTP communication
-<% if glance_registry_ssl %>
+<% if registry_ssl %>
 registry_client_protocol = https
 <% else %>
 registry_client_protocol = http
@@ -203,11 +203,11 @@ swift_store_auth_address = <%= keystone_protocol %>://<%= keystone_host %>:5000/
 # If you use Swift authentication service, set it to 'account':'user'
 # where 'account' is a Swift storage account and 'user'
 # is a user in that account
-swift_store_user = <%= glance_images_tenant %>:<%= glance_keystone_user %>
+swift_store_user = <%= images_tenant %>:<%= keystone_user %>
 
 # Auth key for the user authenticating against the
 # Swift authentication service
-swift_store_key = <%= glance_keystone_password %>
+swift_store_key = <%= keystone_password %>
 
 # Container within the account that the account should use
 # for storing images in Swift
@@ -323,8 +323,8 @@ auth_host = <%= keystone_host %>
 auth_port = 35357
 auth_protocol = <%= keystone_protocol %>
 admin_tenant_name = <%= keystone_service_tenant %>
-admin_user = <%= glance_keystone_user %>
-admin_password = <%= glance_keystone_password %>
+admin_user = <%= keystone_user %>
+admin_password = <%= keystone_password %>
 
 
 [paste_deploy]
