@@ -29,7 +29,7 @@ backlog = 4096
 # SQLAlchemy connection string for the reference implementation
 # registry server. Any valid SQLAlchemy connection string is fine.
 # See: http://www.sqlalchemy.org/docs/05/reference/sqlalchemy/connections.html#sqlalchemy.create_engine
-sql_connection = mysql://<%= glance_db_user %>:<%= glance_db_pass %>@<%= glance_db_host %>/glance
+sql_connection = mysql://<%= db_user %>:<%= db_pass %>@<%= db_host %>/glance
 
 # Period in seconds after which SQLAlchemy should reestablish its connection
 # to the database.
@@ -62,7 +62,7 @@ use_syslog = False
 # Facility to use. If unset defaults to LOG_USER.
 # syslog_log_facility = LOG_LOCAL1
 
-<% if glance_registry_ssl %>
+<% if ssl %>
 # ================= SSL Options ===============================
 
 # Certificate file to use when starting registry server securely
@@ -78,8 +78,8 @@ auth_host = <%= keystone_host %>
 auth_port = 35357
 auth_protocol = <%= keystone_protocol %>
 admin_tenant_name = <%= keystone_service_tenant %>
-admin_user = <%= glance_keystone_user %>
-admin_password = <%= glance_keystone_password %>
+admin_user = <%= keystone_user %>
+admin_password = <%= keystone_password %>
 
 [paste_deploy]
 # Name of the paste configuration file that defines the available pipelines

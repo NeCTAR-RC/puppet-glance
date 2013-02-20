@@ -1,10 +1,4 @@
-class glance::registry inherits glance {
-
-  if !$::glance_registry_workers {
-    $workers = 0
-    } else {
-    $workers = $::glance_registry_workers
-  }
+class glance::registry($workers=0, $ssl=false, $db_user, $db_pass, $db_host) inherits glance {
 
   $total_procs = 1 + $workers
 
@@ -40,7 +34,7 @@ class glance::registry inherits glance {
     require => Package['glance-registry'],
   }
 
-  if $::glance_registry_ssl {
+  if $ssl {
     File <| tag == 'sslcert' |> {
       notify +> Service['glance-registry'],
     }

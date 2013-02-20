@@ -1,10 +1,4 @@
-class glance::api inherits glance {
-
-  if !$::glance_api_workers {
-    $workers = 0
-    } else {
-    $workers = $::glance_api_workers
-  }
+class glance::api($workers, $ssl, $defaultstore, $registry_host, $registry_ssl=false) inherits glance {
 
   $total_procs = 1 + $workers
 
@@ -19,7 +13,7 @@ class glance::api inherits glance {
     ensure => running,
   }
 
-  if $glance_api_ssl {
+  if $ssl {
     File <| tag == 'sslcert' |> {
       notify +> Service['glance-api'],
     }
