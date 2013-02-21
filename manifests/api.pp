@@ -1,4 +1,4 @@
-class glance::api($workers, $ssl, $defaultstore, $registry_host, $registry_ssl=false) inherits glance {
+class glance::api($workers, $ssl, $defaultstore, $registry_host, $registry_ssl=false, $memcache_servers) inherits glance {
 
   $total_procs = 1 + $workers
 
