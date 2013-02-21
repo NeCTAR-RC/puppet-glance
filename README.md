@@ -1,30 +1,37 @@
 Puppet Glance
 =============
 
-Variables
----------
+Class: glance
+-------------
+ * glance::keystone_user
+ * glance::keystone_password
 
-Glance
+Class: glance::api
+------------------
+ * glance::api::ssl
+ * glance::api::defaultstore
+ * glance::api::registry_host
+ * glance::api::registry_ssl
+ * glance::api::images_tenant
+ * glance::api::memcache_servers
 
- * glance_defaultstore
- * glance_keystone_user
- * glance_keystone_password
- * glance_registry_host
- * glance_api_workers
- * glance_registry_workers
- * glance_api_ssl
- * glance_registration_ssl
- * glance_images_tenant - The tenant under which images are stored if using swift
+Class: glance::registry
+-----------------------
+ * glance::registry::db_host
+ * glance::registry::db_user
+ * glance::registry::db_pass
+ * glance::registry::ssl
+ * glance::registry::memcache_servers
 
 Openstack
-
+---------
  * openstack_version
 
 Keystone
-
- * keystone_service_tenant
- * keystone_host
- * keystone_protocol
+--------
+ * keystone::host
+ * keystone::protocol
+ * keystone::service_tenant
 
 SSL certs
 
@@ -33,9 +40,3 @@ SSL certs
 
 Note: If you tag these resources with 'sslcert' glance will be restarted if these change.
 
-Classes
--------
-
-glance::api
-
-glance::registry
