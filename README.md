@@ -34,6 +34,7 @@ Keystone
  * keystone::service_tenant
 
 SSL certs
+---------
 
  * ssl_cert_path - where on the filesystem the ssl cert lives
  * ssl_key_path  - where on the filesystem the ssl key lives
