@@ -1,4 +1,4 @@
-class glance::registry($workers=0, $ssl=false, $db_user, $db_pass, $db_host, $memcache_servers) inherits glance {
+class glance::registry($workers=0, $ssl=false, $db_user, $db_pass, $db_host, $memcache_servers='localhost:11211') inherits glance {
 
   $total_procs = 1 + $workers
 
