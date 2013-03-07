@@ -1,0 +1,8 @@
+Change-Id: Ibc4e484edd15eea178f07fd4221cbaea0ccff4cf
+Code-Review+2: Sam Morrison <sam.morrison@unimelb.edu.au>
+Verified+1: Jenkins <rc-melbourne@nectar.org.au>
+Submitted-by: Sam Morrison <sam.morrison@unimelb.edu.au>
+Submitted-at: Thu, 07 Mar 2013 11:29:01 +1100
+Reviewed-on: https://review.rc.nectar.org.au/160
+Project: NeCTAR-RC/puppet-glance
+Branch: refs/heads/production
