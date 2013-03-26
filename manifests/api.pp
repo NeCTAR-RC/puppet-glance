@@ -49,4 +49,9 @@ class glance::api($workers=0, $ssl=false, $defaultstore='swift', $registry_host,
     'service_glance-api':
       check_command => "/usr/lib/nagios/plugins/check_procs -c ${total_procs}:${total_procs} -u glance -a /usr/bin/glance-api";
   }
+
+  nagios::service {
+    'check_glance':
+      check_command => 'check_glance!${keystone_protocol}://${keystone_host}:5000/v2.0/!${nagios_keystone_user}!${nagios_keystone_pass}!${nagios_keystone_tenant}!${nagios_image_count}!${nagios_image}',
+  }
 }
