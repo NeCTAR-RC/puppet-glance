@@ -1,6 +1,8 @@
 class glance::api($workers=0, $ssl=false, $defaultstore='swift', $registry_host, $registry_ssl=false, $memcache_servers='localhost:11211', $images_tenant='glance') inherits glance {
 
   $total_procs = 1 + $workers
+  $api_flavor = hiera('glance::api::flavor', 'keystone')
+  $cache_max_size = hiera('glance::api::cache_max_size', '10737418240')
 
   package { 'glance-api':
     ensure => installed,
@@ -38,7 +40,6 @@ class glance::api($workers=0, $ssl=false, $defaultstore='swift', $registry_host,
     '/etc/glance/glance-scrubber.conf':
       content => template("glance/${openstack_version}/glance-scrubber.conf.erb");
   }
-
 
   nagios::service { 'http_glance_api':
     check_command => 'http_port!9292',
