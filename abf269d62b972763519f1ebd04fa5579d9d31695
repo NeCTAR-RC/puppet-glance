@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASH///+c\u003d",
+        "filename": "manifests/api.pp",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2013-05-01T04:30:13Z",
+      "side": 1,
+      "message": "Can you add defaults in for this eg.\n(also note the change in variable name as it belongs in the same class\n\n$api_flavor \u003d hiera(\u0027glance::api::flavor\u0027, \u0027keystone\u0027)\n$cache_max_size \u003d hiera(\u0027glance::api::cache_max_size\u0027, \u002710737418240\u0027)",
+      "revId": "abf269d62b972763519f1ebd04fa5579d9d31695",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
