@@ -1,4 +1,13 @@
-class glance::api($workers=0, $ssl=false, $defaultstore='swift', $registry_host, $registry_ssl=false, $memcache_servers='localhost:11211', $images_tenant='glance') inherits glance {
+class glance::api($listen='0.0.0.0',
+                  $port='9292',
+                  $workers=0,
+                  $ssl=false,
+                  $defaultstore='swift',
+                  $registry_host,
+                  $registry_ssl=false,
+                  $memcache_servers='localhost:11211',
+                  $images_tenant='glance') inherits glance
+{
 
   $total_procs = 1 + $workers
   $api_flavor = hiera('glance::api::flavor', 'keystone')
