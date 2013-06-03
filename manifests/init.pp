@@ -5,6 +5,7 @@ class glance {
   $keystone_service_tenant = hiera('keystone::service_tenant')
   $keystone_user = hiera('glance::keystone_user')
   $keystone_password = hiera('glance::keystone_password')
+  $openstack_version = hiera('openstack_version')
 
   user { 'glance':
     groups => $ssl_group,
