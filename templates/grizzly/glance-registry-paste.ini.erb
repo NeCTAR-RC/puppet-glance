@@ -17,4 +17,3 @@ paste.filter_factory = glance.api.middleware.context:UnauthenticatedContextMiddl
 
 [filter:authtoken]
 paste.filter_factory = keystoneclient.middleware.auth_token:filter_factory
-memcache_servers = <%= memcache_servers %>
