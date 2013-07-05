@@ -31,10 +31,10 @@ default_store = <%= defaultstore %>
 #image_size_cap = 1099511627776
 
 # Address to bind the API server
-bind_host = 0.0.0.0
+bind_host = <%= listen %>
 
 # Port the bind the API server to
-bind_port = 9292
+bind_port = <%= port %>
 
 # Log to this file. Make sure you do not set the same log
 # file for both the API and registry servers!

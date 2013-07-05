@@ -10,10 +10,10 @@ debug = False
 <% end %>
 
 # Address to bind the registry server
-bind_host = 0.0.0.0
+bind_host = <%= listen %>
 
 # Port the bind the registry server to
-bind_port = 9191
+bind_port = <%= port %>
 
 # Log to this file. Make sure you do not set the same log
 # file for both the API and registry servers!
