@@ -50,8 +50,8 @@ class glance::api($listen='0.0.0.0',
       content => template("glance/${openstack_version}/glance-scrubber.conf.erb");
   }
 
-  nagios::service { 'http_glance_api':
-    check_command => 'http_port!9292',
+  nagios::service { "http_glance_api":
+    check_command => "http_port!${port}",
     servicegroups => 'openstack-endpoints';
   }
 

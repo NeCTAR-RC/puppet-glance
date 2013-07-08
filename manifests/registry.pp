@@ -46,11 +46,15 @@ class glance::registry($listen='0.0.0.0',
     File <| tag == 'sslcert' |> {
       notify +> Service['glance-registry'],
     }
-  }
-
-  nagios::service { 'http_glance_registry':
-    check_command => 'check_glance_registry_ssl!9191',
-    servicegroups => 'openstack-endpoints';
+    nagios::service { 'http_glance_registry':
+      check_command => 'check_glance_registry_ssl!9191',
+      servicegroups => 'openstack-endpoints';
+    }
+  } else {
+    nagios::service { 'http_glance_registry':
+      check_command => 'check_glance_registry!9191',
+      servicegroups => 'openstack-endpoints';
+    }
   }
 
   nagios::nrpe::service {
