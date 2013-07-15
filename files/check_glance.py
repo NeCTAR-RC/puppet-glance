@@ -119,7 +119,7 @@ if __name__ == '__main__':
 
     token = ks_client.auth_token
     endpoint = ks_client.service_catalog.url_for(service_type='image')
-
+    endpoint = endpoint.replace('v1','')
     c = glance_client.Client('1', endpoint, token=token)
     sys.exit(check_glance(c, args))
   except Exception as e:
