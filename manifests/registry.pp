@@ -61,6 +61,13 @@ class glance::registry($listen='0.0.0.0',
     'service_glance-registry':
       check_command => "/usr/lib/nagios/plugins/check_procs -c ${workers}:${total_procs} -u glance -a /usr/bin/glance-registry";
   }
+
+  firewall { "100 glance-registry":
+    dport  => 9191,
+    proto  => tcp,
+    action => accept,
+  }
+
 }
 
 class glance::registry::nagios-checks {
