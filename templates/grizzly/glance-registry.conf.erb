@@ -38,7 +38,7 @@ sql_connection = mysql://<%= db_user %>:<%= db_pass %>@<%= db_host %>/glance
 # idle connections. This can result in 'MySQL Gone Away' exceptions. If you
 # notice this, you can lower this value to ensure that SQLAlchemy reconnects
 # before MySQL can drop the connection.
-sql_idle_timeout = 3600
+sql_idle_timeout = 60
 
 workers = <%= workers %>
 
