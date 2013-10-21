@@ -18,6 +18,7 @@ Class: glance::api
 Class: glance::registry
 -----------------------
  * glance::registry::db_host
+ * glance::registry::db_name
  * glance::registry::db_user
  * glance::registry::db_pass
  * glance::registry::ssl
