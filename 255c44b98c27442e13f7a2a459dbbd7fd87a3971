@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAATn//+WY\u003d",
+        "filename": "templates/havana/glance-api.conf.erb",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2013-11-12T04:27:47Z",
+      "side": 1,
+      "message": "Can we leave v2 API disabled",
+      "revId": "255c44b98c27442e13f7a2a459dbbd7fd87a3971",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATn//+WU\u003d",
+        "filename": "templates/havana/glance-api.conf.erb",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2013-11-12T04:27:47Z",
+      "side": 1,
+      "message": "Want to enable syslog",
+      "revId": "255c44b98c27442e13f7a2a459dbbd7fd87a3971",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATn//+WQ\u003d",
+        "filename": "templates/havana/glance-registry.conf.erb",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2013-11-12T04:27:47Z",
+      "side": 1,
+      "message": "Enable this",
+      "revId": "255c44b98c27442e13f7a2a459dbbd7fd87a3971",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
