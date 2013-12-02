@@ -28,6 +28,9 @@ class glance::api($listen='0.0.0.0',
     File <| tag == 'sslcert' |> {
       notify +> Service['glance-api'],
     }
+    $check_command = "https_port!9292"
+  } else {
+    $check_command = "http_port!9292"
   }
 
   File {
@@ -57,7 +60,7 @@ class glance::api($listen='0.0.0.0',
   }
 
   nagios::service { "http_glance_api":
-    check_command => "http_port!${port}",
+    check_command => $check_command,
     servicegroups => 'openstack-endpoints';
   }
 
