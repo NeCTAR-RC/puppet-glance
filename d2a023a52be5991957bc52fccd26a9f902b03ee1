@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAATn//+Jo\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2013-12-02T02:18:34Z",
+      "side": 1,
+      "message": "Ignore what? Should that nagios check be disabled then if glance is running on a different port?",
+      "revId": "d2a023a52be5991957bc52fccd26a9f902b03ee1",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
