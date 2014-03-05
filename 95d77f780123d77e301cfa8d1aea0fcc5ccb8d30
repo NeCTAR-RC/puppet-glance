@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAT3///eY\u003d",
+        "filename": "manifests/api.pp",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000088
+      },
+      "writtenOn": "2014-03-05T00:41:37Z",
+      "side": 1,
+      "message": "This could be cleaner. Add a swift_store_region to the params for the glance::api class instead.",
+      "revId": "95d77f780123d77e301cfa8d1aea0fcc5ccb8d30",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
