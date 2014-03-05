@@ -12,6 +12,7 @@ class glance::api($listen='0.0.0.0',
   $total_procs = 1 + $workers
   $api_flavor = hiera('glance::api::flavor', 'keystone')
   $cache_max_size = hiera('glance::api::cache_max_size', '10737418240')
+  $swift_store_region = hiera('glance::api::swift_store_region', '')
 
   package { 'glance-api':
     ensure => installed,

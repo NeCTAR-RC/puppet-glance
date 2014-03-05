@@ -322,7 +322,12 @@ swift_enable_snet = False
 
 # The region of the swift endpoint to be used for single tenant. This setting
 # is only necessary if the tenant has multiple swift endpoints.
+
+<% if @swift_store_region -%>
+swift_store_region = <%= swift_store_region %>
+<% else %>
 #swift_store_region =
+<% end %>
 
 # ============ S3 Store Options =============================
 
