@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAT3///c4\u003d",
+        "filename": "templates/havana/glance-api.conf.erb",
+        "patchSetId": 2
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2014-03-06T03:49:39Z",
+      "side": 1,
+      "message": "can you use \u003c% else -%\u003e and \u003c% end -%\u003e\n\nThe - means it doesn\u0027t add whitespace which will mean it won\u0027t restart glance-api",
+      "revId": "0e33acf120da7bf808d9ca93b51e7ae92b388840",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
