@@ -1,0 +1,8 @@
+Code-Review+1: Sam Morrison <sam.morrison@unimelb.edu.au>
+Verified+1: Jenkins <rc-melbourne@nectar.org.au>
+Code-Review+1: Michael Mallon <m.mallon@uq.edu.au>
+Submitted-by: Sam Morrison <sam.morrison@unimelb.edu.au>
+Submitted-at: Thu, 06 Mar 2014 15:33:19 +1100
+Reviewed-on: https://review.rc.nectar.org.au/1148
+Project: NeCTAR-RC/puppet-glance
+Branch: refs/heads/master
