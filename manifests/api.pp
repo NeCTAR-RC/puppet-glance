@@ -52,6 +52,8 @@ class glance::api($listen='0.0.0.0',
       content => template("glance/${openstack_version}/glance-cache.conf.erb");
     '/etc/glance/glance-scrubber.conf':
       content => template("glance/${openstack_version}/glance-scrubber.conf.erb");
+    '/etc/glance/policy.json':
+      source => "puppet:///modules/glance/${openstack_version}/policy.json");
   }
 
   firewall { "100 glance-api":
