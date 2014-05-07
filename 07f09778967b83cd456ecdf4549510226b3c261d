@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAT3//99o\u003d",
+        "filename": "templates/icehouse/glance-api.conf.erb",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2014-05-07T06:54:08Z",
+      "side": 1,
+      "message": "need to change this to 60?",
+      "revId": "07f09778967b83cd456ecdf4549510226b3c261d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
