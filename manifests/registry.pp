@@ -17,7 +17,6 @@ class glance::registry($listen='0.0.0.0',
   }
 
   include mysql::python
-  realize Package['python-keystone']
 
   service { 'glance-registry':
     ensure => running,
