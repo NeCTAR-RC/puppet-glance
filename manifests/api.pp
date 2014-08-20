@@ -19,8 +19,6 @@ class glance::api($listen='0.0.0.0',
     before => User['glance'],
   }
 
-  realize Package['python-keystone']
-
   service { 'glance-api':
     ensure => running,
   }
