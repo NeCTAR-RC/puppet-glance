@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa2559ec_0d0a55d2",
+        "filename": "manifests/init.pp",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2015-01-20T22:53:30Z",
+      "side": 1,
+      "message": "is this better that ensure_packages?\n\nhttps://github.com/puppetlabs/puppetlabs-stdlib",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 37
+      },
+      "revId": "fbc9b6514b28a12487e15e2749bd3e8765b11620",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_2d0599c2",
+        "filename": "manifests/init.pp",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2015-01-20T22:53:30Z",
+      "side": 1,
+      "message": "white space.",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 2
+      },
+      "revId": "fbc9b6514b28a12487e15e2749bd3e8765b11620",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
