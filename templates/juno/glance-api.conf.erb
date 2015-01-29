@@ -449,8 +449,9 @@ trace_sqlalchemy = False
 #      glance.store.cinder.Store,
 #      glance.store.gridfs.Store,
 #      glance.store.vmware_datastore.Store,
-#stores = glance.store.filesystem.Store,
-#         glance.store.http.Store
+stores = glance.store.filesystem.Store,
+         glance.store.http.Store
+         glance.store.swift.Store
 
 # ============ Filesystem Store Options ========================
 
