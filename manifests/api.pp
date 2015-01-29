@@ -80,6 +80,6 @@ class glance::api($listen='0.0.0.0',
 
   nagios::service {
     'check_glance':
-      check_command => "check_glance!${keystone_protocol}://${keystone_host}:5000/v2.0/!${nagios_keystone_user}!${nagios_keystone_pass}!${nagios_keystone_tenant}!${nagios_image_count}!${nagios_image}",
+      check_command => "check_glance!${glance::keystone_protocol}://${glance::keystone_host}:5000/v2.0/!${nagios_keystone_user}!${nagios_keystone_pass}!${nagios_keystone_tenant}!${nagios_image_count}!${nagios_image}",
   }
 }
