@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa2559ec_339b3acb",
+        "filename": "manifests/api.pp",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2015-02-02T02:48:35Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it be better to grab these from keystone:: with a hiera call? That way we don\u0027t have to duplicate them everywhere?",
+      "range": {
+        "startLine": 83,
+        "startChar": 39,
+        "endLine": 83,
+        "endChar": 64
+      },
+      "revId": "b74f29b02bec42e283ca311e1fb68f25accb4097",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
