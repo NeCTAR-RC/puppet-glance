@@ -80,7 +80,7 @@ def check_glance(c,args):
 
     for image in required_images:
       try:
-        if len(list(c.images.list(**{"filters": {"name": image}}))) == 1:
+        if len(list(c.images.list(**{"filters": {"name": image}}))) >= 1:
           valid_image = valid_image + 1
       except :
         pass
