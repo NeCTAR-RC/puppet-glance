@@ -232,6 +232,8 @@ admin_tenant_name = <%= keystone_service_tenant %>
 admin_user = <%= keystone_user %>
 admin_password = <%= keystone_password %>
 memcache_servers = <%= memcache_servers %>
+signing_dir = /var/lib/glance/keystone-signing
+revocation_cache_time = 10
 
 [paste_deploy]
 # Name of the paste configuration file that defines the available pipelines
