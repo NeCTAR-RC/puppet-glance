@@ -10,8 +10,9 @@ class glance {
   user { 'glance':
     groups => $ssl_group,
   }
-  realize(Package['python-memcache'])
-  
+
+  include memcached::python
+
 }
 
 class glance::nagios-checks {
