@@ -7,7 +7,9 @@ class glance::api($listen='0.0.0.0',
                   $registry_ssl=false,
                   $memcache_servers='localhost:11211',
                   $images_tenant='glance',
-                  $swift_store_region=undef) inherits glance
+                  $swift_store_region=undef,
+                  $show_image_direct_url=false,
+) inherits glance
 {
 
   $total_procs = 1 + $workers
