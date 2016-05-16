@@ -30,5 +30,4 @@ class glance(
     }
   }
 
-  ensure_resource('package', 'python-openstackclient', {'ensure' => $package_ensure, tag => 'openstack'})
 }
