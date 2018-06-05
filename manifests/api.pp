@@ -435,7 +435,7 @@ class glance::api(
     } else {
       $final_stores_real = $stores_real[0]
     }
-    if !$default_store_real {
+    if !defined('$default_store_real') {
       # set default store based on provided stores when it isn't explicitly set
       warning("default_store not provided, it will be automatically set to ${stores_real[0]}")
       $default_store_real = $stores_real[0]
