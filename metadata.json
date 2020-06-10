@@ -18,6 +18,10 @@
             "version_requirement": ">=5.0.0 <6.0.0"
         },
         {
+            "name": "openstack/swift",
+            "version_requirement": ">=15.4.0 <16.0.0"
+        },
+        {
             "name": "openstack/openstacklib",
             "version_requirement": ">=15.4.0 <16.0.0"
         },
